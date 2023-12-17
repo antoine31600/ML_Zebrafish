@@ -7,6 +7,10 @@ import ast
 
 plt.rcParams['font.size'] = 18
 
+#Permet de plot la courbure de la nageoire du poisson en fonction du temps 
+#ainsi que de détecter les évènements de nage de facon primaire grâce à la classe TailAnalysis
+
+#paths a changer pour chaque ordi
 path_dataset1 = 'C:/Users/bedba/OneDrive/Git/test/projet_M-L/dataset1-wholebrain/'
 path_dataset2 = 'C:/Users/bedba/OneDrive/Git/test/Projet_M-L/dataset2-mutants/'
 
@@ -23,7 +27,7 @@ for path in paths:
     files = identify_files(path, ['tail_angles', '.npy'])
     for file in files:
         filess.append(file)
-def truc_pour_tail_data(ind):
+def extract_tail_data(ind):
     file = filess[ind]
     if ind <= 19:
         angles = np.load(paths[0] + file)
@@ -33,7 +37,7 @@ def truc_pour_tail_data(ind):
     tail.detect_swim_bouts(threshold=0.75)
     tails.append(tail)
     return file, angles, tail
-file, angles, tail = truc_pour_tail_data(0)
+file, angles, tail = extract_tail_data(0)
 #fig, ax = plt.subplots(figsize=(15, 5))
 ymax = np.max(np.abs(tail.curvature))
 plt.plot(tail.curvature, color='black')

@@ -2,7 +2,6 @@
 # Identification et classement des différents évènements de nage de poissons zèbres
 
 Ce dépot Github a été créé dans le cadre d'un projet effectué par  Bastien Bédard(bastien.bedard.1@ulaval.ca), Camille Poitras(camille.poitras.2@ulaval.ca) et Antoine Chartier(antoine.chartier.1@ulaval.ca) sou la supervision d'Antoine Légaré (antoine.legare.1@ulaval.ca), étudiant en 2ème année au doctorat en biophotnique au centre de recherche Cervo. Ce projet s'inscrit dans le cours d'introduction à l'apprentissage automatique (GLO-4101) de l'Université Laval pour le professeur Christian Gagné.
-
 Les données utilisées  dans le cadre de ce projet ainsi que le fichier "utilities.py" ont été fournies par Antoine Légaré
 
 Ce projet a pour but d'utiliser des données des mouvements de nageoires de poissons-zèbres provenant du CERVO afin d'identifier  les évènements de nages à l'aide d'apprentissage supervisé, puis de les classifier selon différentes méthodes de nages à l'aide d'apprentissage non-supervisé.
